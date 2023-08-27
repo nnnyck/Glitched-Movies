@@ -1,4 +1,4 @@
-# Glitched Filmes
+# Glitched Movies
  A ideia do projeto é criar um site com catálogo de filmes e que permitirá o usuário criticar os filmes.
  O catálogo será puxado a partir de uma api do The Movie Database e as críticas serão cadastradas em um banco de dados separado.
 
