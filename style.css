@@ -1,0 +1,58 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Estilos para a barra de navegação (os dois primeiros botões) */
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilos para os botões "Login" e "Cadastro" */
+.search-form button {
+    background-color: #000000; /* Cor de fundo igual à cor dos botões de navegação */
+    color: white; /* Cor do texto branca */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Estilos para a classe .cabecalho h1 */
+.cabecalho h1 {
+    font-size: 24px;
+    margin: 10px;
+}
+
+/* Estilos para a classe .container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #fff;
+}
