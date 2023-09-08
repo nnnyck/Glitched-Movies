@@ -42,17 +42,3 @@ footer {
     background-color: #000000;
     color: #fff;
 }
-
-.botao-voltar {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #000000;
-    color: white;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
-
-.botao-voltar:hover {
-    background-color: #333333;
-}
