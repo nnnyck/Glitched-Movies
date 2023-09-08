@@ -16,7 +16,7 @@ header {
     padding: 10px 20px;
 }
 
-/* Estilos para a barra de navegação (os dois primeiros botões) */
+/* Estilos para a barra de navegação */
 nav {
     display: flex;
     gap: 10px;
@@ -27,21 +27,7 @@ nav a {
     color: white;
 }
 
-/* Estilos para os botões "Login" e "Cadastro" */
-.search-form button {
-    background-color: #000000; /* Cor de fundo igual à cor dos botões de navegação */
-    color: white; /* Cor do texto branca */
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-/* Estilos para a classe .cabecalho h1 */
-.cabecalho h1 {
-    font-size: 24px;
-    margin: 10px;
-}
-
-/* Estilos para a classe .container */
+/* Estilos para o conteúdo principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -55,4 +41,18 @@ footer {
     padding: 1rem;
     background-color: #000000;
     color: #fff;
+}
+
+.botao-voltar {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-voltar:hover {
+    background-color: #333333;
 }
