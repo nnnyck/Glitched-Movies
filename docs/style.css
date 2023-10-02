@@ -1,10 +1,13 @@
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin-left: 200px; /* Margem à esquerda */
+    margin-right: 200px; /* Margem à direita */
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #fff;
+    box-sizing: border-box; /* Garante que as margens não aumentem o tamanho total do corpo */
 }
+
 
 /* Estilos para o cabeçalho */
 header {
@@ -41,4 +44,76 @@ footer {
     padding: 1rem;
     background-color: #000000;
     color: #fff;
+}
+
+/* Reset de estilos para evitar comportamentos indesejados em navegadores diferentes */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para o título principal */
+h1.title {
+    background-color: cornflowerblue;
+    color: beige;
+    padding: 10px;
+}
+
+/* Estilos para o formulário de pesquisa */
+form {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    display: flex;
+}
+
+form input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+form button {
+    padding: 5px 10px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkblue;
+}
+
+/* Estilos para a lista de resultados */
+div.lista {
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos para os itens da lista de resultados */
+div.item {
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+div.item:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+/* Estilos para as imagens dos itens */
+div.item img {
+    width: 100%;
 }

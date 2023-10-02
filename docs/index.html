@@ -18,11 +18,56 @@
         </nav>    
     </header>
     <main>
-        <div class="container">
-            <h1>Bem-vindo ao meu site!</h1>
-            <p>Este é um projeto de faculdade com o intuito de criar um site com um catálogo de filmes que podem ser avaliados pelos usuários.</p>
+        <h1 class="title">Bem vindo.</h1>
+        <form>
+            <input name="pesquisa" placeholder="Digite o nome do filme" />
+            <button>Pesquisar</button>
+        </form>
+        <div class="lista">
+            
         </div>
     </main>
+
+    <script>
+        const apiKey = '858b4a37';
+        const frmPesquisa = document.querySelector("form");
+    
+        frmPesquisa.onsubmit = (ev) => {
+            ev.preventDefault();
+            
+            const pesquisa = ev.target.pesquisa.value;
+            
+            if (pesquisa == "") {
+                alert ('Preencha o campo!');
+                return;
+            }
+    
+            fetch(`https://www.omdbapi.com/?s=${pesquisa}&apikey=${apiKey}`)
+                .then(result => result.json())
+                .then(json => carregaLista(json)); // Chame a função carregaLista para exibir os resultados
+        }
+    
+        const carregaLista = (json) => {
+            const lista = document.querySelector("div.lista");
+            lista.innerHTML = "";
+
+            if (json.Response == 'False') {
+                alert('Nenhum filme encontrado');
+                return
+            }
+    
+            json.Search.forEach(element => {
+                let item = document.createElement("div");
+                item.classList.add("item");
+    
+                item.innerHTML = `<img src= "${element.Poster}" /><h2>${element.Title}</h2>`;
+    
+                lista.appendChild(item);
+            }); 
+        }
+    </script>
+    
+
     <footer>
         <p>2023</p>
     </footer>
