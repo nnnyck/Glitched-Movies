@@ -1,8 +1,6 @@
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    margin-left: 200px; /* Margem à esquerda */
-    margin-right: 200px; /* Margem à direita */
     padding: 0;
     background-color: #fff;
     box-sizing: border-box; /* Garante que as margens não aumentem o tamanho total do corpo */
