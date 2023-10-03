@@ -1,6 +1,6 @@
 /* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /*fontes */
     padding: 0;
     background-color: #fff;
     box-sizing: border-box; /* Garante que as margens não aumentem o tamanho total do corpo */
