@@ -1,78 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glitched Movies</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+
+    <title>Seu Site de Filmes e Séries</title>
+
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="pagina-filmes.html">Filmes</a>
-            <a href="pagina-series.html">Séries</a>
-        </nav>
-        <nav>
-            <a href="pagina-login.html">Login</a>
-            <a href="pagina-cadastro.html">Cadastro</a>
-        </nav>    
-    </header>
-    <main>
-        <h1 class="title">Bem vindo.</h1>
-        <form>
-            <input name="pesquisa" placeholder="Digite o nome de um Título em inglês!">
-            <button>Pesquisar</button>
-        </form>
-        <div class="lista">
-            
+
+    <!-- Conteúdo do Site vai aqui -->
+
+    <!-- Footer -->
+    <footer class="black-bg">
+        <div class="footer-content">
+            <div class="left-content">
+                <h2>Forum Cinema</h2>
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="center-content">
+                <a href="#">Cinema</a>
+                <a href="#">Help</a>
+                <a href="#">Company</a>
+                <a href="#">Media</a>
+                <a href="#">Various</a>
+            </div>
+            <div class="right-content">
+                <nav class="btn_social">
+                    <ul>
+                        <!-- Ícone do Facebook -->
+                        <li><a href="#" target="_blank" title="facebook"><i class="fab fa-facebook-f icon"></i></a></li>
+                        <!-- Ícone do Twitter -->
+                        <li><a href="#" target="_blank" title="twitter"><i class="fab fa-twitter icon"></i></a></li>
+                        <!-- Ícone do Instagram -->
+                        <li><a href="#" target="_blank" title="instagram"><i class="fab fa-instagram icon"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </main>
-
-    <script>
-        const apiKey = '858b4a37';
-        const frmPesquisa = document.querySelector("form");
-    
-        frmPesquisa.onsubmit = (ev) => {
-            ev.preventDefault();
-            
-            const pesquisa = ev.target.pesquisa.value;
-            
-            if (pesquisa == "") {
-                alert ('Preencha o campo!');
-                return;
-            }
-    
-            fetch(`https://www.omdbapi.com/?s=${pesquisa}&apikey=${apiKey}`)
-                .then(result => result.json())
-                .then(json => carregaLista(json)); // Chame a função carregaLista para exibir os resultados
-        }
-    
-        const carregaLista = (json) => {
-            const lista = document.querySelector("div.lista");
-            lista.innerHTML = "";
-
-            if (json.Response == 'False') {
-                alert('Nenhum filme encontrado');
-                return
-            }
-    
-            json.Search.forEach(element => {
-                let item = document.createElement("div");
-                item.classList.add("item");
-    
-                item.innerHTML = `<img src= "${element.Poster}" /><h2>${element.Title}</h2>`;
-    
-                lista.appendChild(item);
-            }); 
-        }
-    </script>
-    
-
-    <footer>
-        <p>2023</p>
     </footer>
-</body>
 
+    <!-- Seu JavaScript vai aqui (se necessário) -->
+
+</body>
 </html>

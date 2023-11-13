@@ -1,117 +1,83 @@
-/* Estilos globais */
 body {
-    font-family: Arial, sans-serif; /*fontes */
-    padding: 0;
-    background-color: #fff;
-    box-sizing: border-box; /* Garante que as margens não aumentem o tamanho total do corpo */
+    font-family: 'Lato', sans-serif;
 }
 
-
-/* Estilos para o cabeçalho */
-header {
-    background-color: #000000;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-/* Estilos para a barra de navegação */
-nav {
-    display: flex;
-    gap: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Estilos para o conteúdo principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    box-sizing: border-box;
-}
-
-/* Estilos para o rodapé */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #000000;
-    color: #fff;
-}
-
-/* Reset de estilos para evitar comportamentos indesejados em navegadores diferentes */
+/* Reset de estilos para garantir consistência em diferentes navegadores */
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-/* Estilos para o título principal */
-h1.title {
-    background-color: cornflowerblue;
-    color: beige;
-    padding: 10px;
-}
-
-/* Estilos para o formulário de pesquisa */
-form {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 20px;
-    display: flex;
-}
-
-form input {
-    padding: 5px;
-    border: none;
-    outline: none;
-    flex: 1;
-}
-
-form button {
-    padding: 5px 10px;
-    background-color: cornflowerblue;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: darkblue;
-}
-
-/* Estilos para a lista de resultados */
-div.lista {
-    margin-top: 10px;
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Estilos para os itens da lista de resultados */
-div.item {
+/* Estilos para o rodapé preto */
+.black-bg {
+    background-color: #000;
+    color: gray;
+    padding: 30px; /* Aumentei o espaço interno do footer */
     text-align: center;
-    padding: 10px;
-    width: 200px;
-    border: 2px solid cornflowerblue;
-    border-radius: 5px;
-    margin: 5px;
 }
 
-div.item:hover {
-    background-color: cornflowerblue;
-    cursor: pointer;
+/* Container para organizar os elementos do rodapé */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Estilos para as imagens dos itens */
-div.item img {
-    width: 100%;
+/* Estilos para a seção à esquerda do rodapé */
+.left-content {
+    text-align: left;
+}
+
+.left-content h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Estilos para a seção central do rodapé */
+.center-content {
+    display: flex;
+}
+
+.center-content a {
+    text-decoration: none;
+    color: gray;
+    margin: 0 15px; /* Ajustei a margem para espaçamento */
+}
+
+/* Estilos para a seção à direita do rodapé (ícones sociais) */
+.right-content {
+    display: flex;
+}
+
+.btn_social ul {
+    display: flex;
+    list-style: none;
+}
+
+.btn_social ul li {
+    margin: 0 10px; /* Ajustei a margem para espaçamento */
+}
+
+.btn_social ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: gray;
+    width: 40px; /* Tamanho menor para os ícones */
+    height: 40px; /* Tamanho menor para os ícones */
+    line-height: 43px;
+    transition: 0.4s;
+    background: #000000;
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+
+.btn_social ul li a i {
+    font-size: 1.5em; /* Ajustei o tamanho da fonte */
+}
+
+.btn_social ul li a:hover {
+    color: #555555;
 }
