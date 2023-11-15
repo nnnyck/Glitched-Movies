@@ -1,20 +1,97 @@
-body {
-    font-family: 'Lato', sans-serif;
-}
 
-/* Reset de estilos para garantir consistência em diferentes navegadores */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between; /* Adicionado para espaçar os itens à esquerda e à direita */
+    align-items: center;
+    background-color: #000;
+    padding: 10px 100px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para a logo e a barra de pesquisa */
+.logo-container, .search-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 2px solid #000;
+    margin-right: 20px; /* Ajustei o espaçamento entre a logo e a barra de pesquisa */
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-bar {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 1.2em;
+}
+
+/* Estilos para a seção à direita do cabeçalho */
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Adicionado para empurrar os itens à direita */
+}
+
+
+/* Estilos para o menu à direita */
+.header-menu {
+    margin-right: 20px;
+}
+
+.header-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-menu li {
+    margin-right: 15px;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* Estilos para o rodapé preto */
 .black-bg {
     background-color: #000;
     color: gray;
-    padding: 30px; /* Aumentei o espaço interno do footer */
+    padding: 30px 100px;
     text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Container para organizar os elementos do rodapé */
@@ -42,7 +119,7 @@ body {
 .center-content a {
     text-decoration: none;
     color: gray;
-    margin: 0 15px; /* Ajustei a margem para espaçamento */
+    margin: 0 15px;
 }
 
 /* Estilos para a seção à direita do rodapé (ícones sociais) */
@@ -56,7 +133,7 @@ body {
 }
 
 .btn_social ul li {
-    margin: 0 10px; /* Ajustei a margem para espaçamento */
+    margin: 0 10px;
 }
 
 .btn_social ul li a {
@@ -65,8 +142,8 @@ body {
     justify-content: center;
     text-decoration: none;
     color: gray;
-    width: 40px; /* Tamanho menor para os ícones */
-    height: 40px; /* Tamanho menor para os ícones */
+    width: 40px;
+    height: 40px;
     line-height: 43px;
     transition: 0.4s;
     background: #000000;
@@ -75,7 +152,7 @@ body {
 }
 
 .btn_social ul li a i {
-    font-size: 1.5em; /* Ajustei o tamanho da fonte */
+    font-size: 1.5em;
 }
 
 .btn_social ul li a:hover {
