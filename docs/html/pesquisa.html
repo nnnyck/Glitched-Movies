@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <title>TMDB Movie and TV Show Search</title>
+</head>
+<body>
+
+  <h1>TMDB Movie and TV Show Search</h1>
+  
+  <label for="search">Search for a movie or TV show: </label>
+  <input type="text" id="search" name="search">
+  <button onclick="searchMedia()">Search</button>
+
+  <div id="results"></div>
+
+  <script>
+    const apiKey = '42b154929c7ff4e46d6e64691b911d37'; 
+
+    function searchMedia() {
+      const query = document.getElementById('search').value;
+      const url = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${query}`;
+
+      $.ajax({
+        url: url,
+        method: 'GET',
+        success: function (data) {
+          displayResults(data.results);
+        },
+        error: function (error) {
+          console.error('Error fetching data:', error);
+        }
+      });
+    }
+
+    function displayResults(results) {
+      const resultsContainer = document.getElementById('results');
+      resultsContainer.innerHTML = '';
+
+      if (results.length === 0) {
+        resultsContainer.innerHTML = '<p>No results found</p>';
+        return;
+      }
+
+      results.forEach(media => {
+        const mediaElement = document.createElement('div');
+        let mediaType = media.media_type === 'movie' ? 'Movie' : 'TV Show';
+        mediaElement.innerHTML = `<h2>${mediaType}: ${media.title || media.name}</h2><p>${media.overview}</p>`;
+        resultsContainer.appendChild(mediaElement);
+      });
+    }
+  </script>
+
+</body>
+</html>
