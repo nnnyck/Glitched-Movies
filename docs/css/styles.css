@@ -95,3 +95,125 @@
     height: 100%;
     object-fit: cover; /* Garante que a imagem cubra completamente o contêiner */
   }
+
+  /* Seção de Filmes Populares*/
+  .main{
+    margin: 0 10%;
+    margin-top: 7vh;
+}
+
+.title{
+    align-items: center;
+}
+
+.div-dos-filmes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Adicione estilos aos cards */
+.movie-card {
+    text-align: center;
+    margin: 20px;
+    width: 300px; /* Largura do card */
+    height: 600px; /* Altura do card */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    border: solid 1px;
+}
+
+.movie-card:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Adicione estilos às imagens dentro dos cards */
+.movie-poster {
+    width: 100%; /* Ajusta a largura da imagem para preencher o card */
+    height: auto; /* Mantém a proporção original da imagem */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicione estilos aos detalhes do filme */
+.movie-details {
+    flex: 1; /* Ocupa o espaço restante no card */
+}
+
+/* Adicione estilos aos títulos e notas */
+.movie-title, .movie-rating {
+    margin: 5px 0;
+}
+
+.yellow-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin-right: 5px; /* Espaçamento entre a bolinha e o texto "IMDb" */
+}
+
+/* Personalização do quadrado sobre nós*/
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+  }
+  
+  .square {
+    width: 104vh;
+    height: 62vh;
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('../imagens/miranha2.jpeg');
+    background-size: cover;
+  }
+  
+  .square h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .square p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .btn-sobrenos {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fd7e14;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-sobrenos:hover {
+    background-color: #45a049;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
