@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-size: 100%;
+  background-color: #ffffff;
+}
+
+.conteudo {
+  margin: 0 5%;
+}
+
+.conteudo-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os elementos na direção da coluna */
+}
+
+.conteudo-main {
+  max-width: 100%;
+}
+
+.apresentacao {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.about-title {
+  font-size: 46px;
+  font-weight: 900;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.about-us {
+  font-size: 18px;
+  line-height: 40px;
+  text-align: justify; /* Alinha o texto à justificar */
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 20px auto;
+  margin-bottom: 10%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.title-membros {
+  text-align: center; /* Centraliza o texto na direção da coluna */
+  color: black;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 125px;
+  letter-spacing: 2.24px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 20px;
+  margin: 0 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+
+  .apresentacao {
+    margin-top: 0;
+  }
+
+  .main-image {
+    margin-top: 20px;
+  }
+
+  .card-container {
+    margin: 20px 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+
+  .title-membros {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .conteudo-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .conteudo-main {
+    max-width: 50%;
+  }
+
+  .apresentacao {
+    margin-top: 0;
+  }
+
+  .main-image {
+    margin-top: 0;
+    }
+}
