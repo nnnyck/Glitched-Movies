@@ -96,7 +96,7 @@
     object-fit: cover; /* Garante que a imagem cubra completamente o contêiner */
   }
 
-  /* Seção de Filmes Populares*/
+/* Seção de Filmes Populares*/
   .main{
     margin: 0 10%;
     margin-top: 7vh;
@@ -118,7 +118,7 @@
     text-align: center;
     margin: 20px;
     width: 300px; /* Largura do card */
-    height: 600px; /* Altura do card */
+    height: 600px auto; /* Altura do card */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
@@ -204,16 +204,27 @@
   }
   
   .btn-sobrenos:hover {
-    background-color: #45a049;
+    background-color: #ffac68;
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  /* Css das Séries*/
+  .main2{
+    margin: 0 10%;
+    margin-top: 3vh;
+}
+
+
+  .div-das-series {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+
+/* Responsividade dos cards */
+@media only screen and (max-width: 450px) {
+    .movie-card {
+        height: auto;
+    }
+}

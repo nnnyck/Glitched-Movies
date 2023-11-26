@@ -1,3 +1,4 @@
+/////////////////////////////////BUSCA DE FILMES POPULARES//////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
   const api_key = '42b154929c7ff4e46d6e64691b911d37';
   const base_url = 'https://api.themoviedb.org/3';
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // Adiciona o título e gêneros
           titleElement.textContent = title;
-          genresElement.textContent = `Genres: ${genres.join(', ')}`;
+          genresElement.textContent = ` ${genres.join(' e ')}`;
 
           // Criar um elemento span para a bolinha amarela
           const yellowDot = document.createElement('span');
@@ -96,5 +97,88 @@ document.addEventListener('DOMContentLoaded', function () {
   function formatRating(rating) {
       // Formata a avaliação para mostrar apenas um número decimal
       return rating.toFixed(1);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const api_key = '42b154929c7ff4e46d6e64691b911d37';
+  const base_url = 'https://api.themoviedb.org/3';
+  const popularSeriesEndpoint = '/tv/popular'; // Endpoint para séries
+
+  // Array de IDs dos elementos div (cards)
+  const cardIds = ['series1', 'series2', 'series3', 'series4'];
+
+  // Verifica se os dados já estão armazenados em localStorage
+  const cachedData = localStorage.getItem('cachedSeriesData');
+  if (cachedData) {
+    // Utiliza os dados armazenados localmente
+    const parsedData = JSON.parse(cachedData);
+    updateSeriesCards(parsedData);
+  } else {
+    // Faz a requisição à API do TMDb se os dados não estiverem armazenados
+    fetch(`${base_url}${popularSeriesEndpoint}?language=pt-br&page=1&api_key=${api_key}`)
+      .then(response => response.json())
+      .then(data => {
+        // Armazena os dados localmente
+        localStorage.setItem('cachedSeriesData', JSON.stringify(data));
+        // Atualiza os cards com as informações das séries
+        updateSeriesCards(data);
+      })
+      .catch(error => console.error('Erro ao obter dados da API do TMDb:', error));
+  }
+
+  function updateSeriesCards(data) {
+    data.results.slice(1, 5).forEach((series, index) => {
+      const posterPath = series.poster_path;
+      const title = series.name;
+      const genres = getGenresNames(series.genre_ids);
+      const rating = formatRating(series.vote_average);
+
+      const imageUrl = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+
+      const cardElement = document.getElementById(cardIds[index]);
+      const imgElement = cardElement.querySelector('.movie-poster');
+      const titleElement = cardElement.querySelector('.movie-title');
+      const genresElement = cardElement.querySelector('.movie-genres');
+      const ratingElement = cardElement.querySelector('.movie-rating');
+
+      imgElement.src = imageUrl;
+      imgElement.alt = 'Series Poster';
+
+      titleElement.textContent = title;
+      genresElement.textContent = ` ${genres.join(' e ')}`;
+
+      const yellowDot = document.createElement('span');
+      yellowDot.className = 'yellow-dot';
+      ratingElement.appendChild(yellowDot);
+
+      ratingElement.innerHTML += ` IMDb ${rating}/10`;
+    });
+  }
+
+  function getGenresNames(genreIds) {
+    // Mapeia os IDs de gêneros para seus respectivos nomes
+    const genreNames = {
+      16: 'Animação',
+      10751: 'Família',
+      10402: 'Música',
+      14: 'Fantasia',
+      35: 'Comédia',
+      878: 'Ficção Científica',
+      28: 'Ação',
+      53: 'Suspense',
+      18: 'Drama',
+      36: 'História',
+      27: 'Terror',
+      9648: 'Mistério',
+    };
+
+    // Obtém os nomes dos gêneros com base nos IDs fornecidos, limitando a dois gêneros
+    return genreIds.slice(0, 2).map(id => genreNames[id]).filter(Boolean);
+  }
+
+  function formatRating(rating) {
+    // Formata a avaliação para mostrar apenas um número decimal
+    return rating.toFixed(1);
   }
 });
