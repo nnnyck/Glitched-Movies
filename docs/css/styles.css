@@ -6,3 +6,92 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+.carousel-item {
+    height: 50rem;
+    background: #777;
+    color: white;
+    position: relative;
+}
+
+.carousel-item .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 350px;
+}
+
+/* Bolinhas entre as categorias dos filmes */
+.bullet-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .bullet {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    margin: 0 10px; /* Espaçamento entre as bolinhas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  /* Bolinhas das avaliações dos filmes */
+.bullet-container2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .bullet2 {
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    color: yellow;
+    border-radius: 50%;
+    margin: 0 10px; /* Espaçamento entre as bolinhas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .bullet3 {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    color: red;
+    border-radius: 50%;
+    margin: 0 10px; /* Espaçamento entre as bolinhas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-left: 50px;
+  }
+
+   #btn-primary- {
+    background-color: #fd7e14 !important;
+    color: white !important;
+    border-color: #fd7e14 !important;
+    border-radius: 50px !important;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 77, 77, 0.85); 
+    pointer-events: none; /* Garante que a sobreposição não bloqueie interações com a imagem */
+  }
+  .image-with-overlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra completamente o contêiner */
+  }

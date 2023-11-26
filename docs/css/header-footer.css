@@ -38,6 +38,7 @@
     height: 4vh;
     border-radius: 10px;
     transition: 0.3s;
+    margin-right: 15px;
 }
 .button-entrar:hover {
     opacity: 0.5;
@@ -45,7 +46,7 @@
 
 /* Rodapé ou Footer */
 .fixa {
-    position: fixed;
+    position: relative;
       bottom: 0;
       width: 100%;
 }
@@ -60,4 +61,6 @@
     .navbar-logo {
         font-size: 25px;
     }
+
+    .
   }
