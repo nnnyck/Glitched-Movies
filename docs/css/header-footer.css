@@ -35,10 +35,10 @@
     color: white;
     border: none;
     width:  130px;
-    height: 4vh;
+    height: 5vh;
     border-radius: 10px;
     transition: 0.3s;
-    margin-right: 15px;
+    margin-right: 1px !important;
 }
 .button-entrar:hover {
     opacity: 0.5;
