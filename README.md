@@ -32,6 +32,3 @@ Sinta-se à vontade para contribuir, reportar problemas ou sugerir melhorias. Ju
 
 **Equipe Glitched Movies**
 - Nyckolas Seixas  - 202212117121
-
-- João Pedro Gomes - 202212140751
-- Vinicius Gabriel - 202209230206
